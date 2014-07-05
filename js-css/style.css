@@ -1,0 +1,334 @@
+
+body {
+	background-color: #EEF2FB;
+	margin: 0px;
+	scrollbar-face-color: #DEE3E7;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #DEE3E7;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;
+}
+
+a {
+	text-decoration: underline;
+	color: #002296;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #002296;
+}
+
+.siriusLogo {
+	position: absolute;
+	top: 60px;
+	margin-left: 565px;
+	z-index: 50;
+}
+
+.languageOption {
+	position: absolute;
+	top: 136px;
+	margin-left: 465px;
+	z-index: 100;
+}
+
+.pageWidth {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+}
+
+
+/*
+********************************************
+	Columns
+********************************************
+*/
+
+#wrapper {
+	padding-left: 220px;
+	padding-right: 550px;
+}
+
+#wrapper .column {
+	float: left;
+	position: relative;
+}
+
+#centerColumn {
+	width: 100%;
+	height: 10px;
+}
+
+#leftColumn {
+	width: 220px;
+	float: left;
+	margin-left: -220px;
+}
+
+* html #leftColumn {
+	left: 220px;
+}
+
+#rightColumn {	
+	width: 550px;
+	margin-right: -550px;
+}
+
+
+/*
+********************************************
+	Expandable Menu
+********************************************	
+*/
+
+
+#dropmenudiv{
+position:absolute;
+background-color: #BCD7EC;
+border:1px solid #666563;
+border-bottom-width: 0;
+font:normal 11px Verdana;
+line-height:18px;
+z-index:100;
+}
+
+#dropmenudiv a{
+width: 100%;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid #666563;
+padding: 1px 0;
+text-decoration: none;
+color: #666666;
+font-weight: none;
+}
+
+#dropmenudiv a:hover{ /*hover background color*/
+background-color: #D3DCE3;
+}
+
+/* Sample CSS definition for the example list. Remove if desired */
+.navlist li {
+list-style-type: square;
+width: 135px;
+background-color: #FFFFB9;
+}
+
+
+.expandTable {
+	width: 189px;
+	border:solid 1px #ABB4BB;
+	background-color: #ABB4BB;
+	margin-left: -40px;
+	margin-top: 2px;
+}
+.showSwitch {
+	display: block;
+}
+.hideSwitch {
+	display: none;
+}
+.expandMenu {
+	width: 196px;
+	height: 25px;	
+	cursor: pointer;
+	margin-bottom: -5px;
+}
+.expandMenu dt {
+	text-transform: uppercase;
+	background-color: #FF0000;
+	padding: 2px;
+	margin: 0px 0px 1px;
+	color: #FFFFFF;
+	cursor: hand;
+}
+.expandMenu a {
+	color: #FFFFFF;
+}
+.expandMenu a:hover {
+	color: #333333;
+	background-color: transparent;
+}
+.expandMenu dd {
+	margin: 0px;
+	padding: 0px;
+	background-color: #999999;
+}
+.expandMenu ul {
+	background-color: #999999;
+	margin:  2em;
+	padding: 0px;
+	list-style-type: none;
+}
+.expandMenu table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.expandMenu td {
+	color: #FFFFFF;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-color: #FFFFFF;
+	border-style: solid;
+	border-width: 1px 0;
+}
+.expandMenu thead td {
+	background-color: #000000;
+	border-top-style: none;
+}
+.alignCenter {
+	text-align: center;
+}
+
+
+
+/*
+********************************************
+	Background colors
+********************************************	
+*/
+
+.whiteBG {
+	background-color: #FFFFFF;
+}
+
+.blackBG {
+	background-color: #000000;
+}
+
+.lightBlueBG {
+	background-color: #C7E9F5;
+}
+
+.blueBG {
+	background-color: #002296;
+}
+
+
+
+/*
+********************************************
+	Links
+********************************************	
+*/
+
+
+.level1 a {
+	font-family: arial, verdana, helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.level1 a:hover, .level1-sel a {
+	font-family: arial, verdana, helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #6DCFF6;
+}
+
+.level1Divider {
+	font-family: verdana, arial, helvetica;
+	font-size: 11px;
+	color: #FFFFFF;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.level2 a {
+	margin-left: 10px;
+	font-family: verdana, arial, verdana, helvetica;
+	font-size: 11px;
+	text-decoration: none;
+	color: #666769;
+}
+
+.level2 a:hover, .level2-sel a {
+	margin-left: 10px;
+	font-family: verdana, arial, helvetica;
+	font-size: 11px;
+	text-decoration: none;
+	color: #003464;
+}
+
+
+/*
+********************************************
+	Content
+********************************************	
+*/
+
+.content {
+	font-size: 11px;
+	font-family: verdana, arial, helvetica;
+	font-weight: none;
+	line-height: 20px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.contentWidth {
+	width: 425px;
+}
+
+.header {
+	font-size: 14px;
+	font-family: verdana, arial, helvetica;
+	font-weight: bold;
+	line-height: 14px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.subHeader {
+	font-size: 14px;
+	font-family: verdana, arial, helvetica;
+	font-weight: bold;
+	line-height: 14px;
+	text-decoration: none;
+	color: #0874B5;
+}
+
+/*
+********************************************
+	Spaces
+********************************************	
+*/
+
+.vSpace2 {
+	margin-top: 2px;
+}
+
+.vSpace3 {
+	margin-top: 3px;
+}
+
+.vSpace5 {
+	margin-top: 5px;
+}
+
+.vSpace7 {
+	margin-top: 7px;
+}
+
+.vSpace10 {
+	margin-top: 10px;
+}
+
+.vSpace15 {
+	margin-top: 15px;
+}
+
+.vSpace20 {
+	margin-top: 20px;
+}
+
+.vSpace30 {
+	margin-top: 30px;
+}

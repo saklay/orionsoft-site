@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Orion Software</title>
+
+<script language="JavaScript">
+<!--
+if (document.images) {
+    var img1 = new Image();
+    var img2 = new Image();
+	var img3 = new Image();
+	var img4 = new Image();
+	
+	img1.src = "images/2bthome.gif";
+	img2.src = "images/2btaboutus.gif";
+	img3.src = "images/2btsolutions.gif";
+	img4.src = "images/2btproducts.gif";
+}
+
+function highlight(img, location, desc) {
+    if (document.images) {
+		document.images[img].src = location + "2bt" + img + ".gif";
+    }
+	window.status=desc;
+	return true;
+}
+
+function unhighlight(img, location) {
+    if (document.images) {
+		document.images[img].src = location + "bt" + img + ".gif";
+    }
+	window.status="";
+	return true;
+}
+
+function getCookie(name) {
+  var dc = document.cookie;
+  var prefix = name + "=";
+  var begin = dc.indexOf("; " + prefix);
+  if (begin == -1) {
+    begin = dc.indexOf(prefix);
+    if (begin != 0) return null;
+  } else
+    begin += 2;
+  var end = document.cookie.indexOf(";", begin);
+  if (end == -1)
+    end = dc.length;
+  return unescape(dc.substring(begin + prefix.length, end));
+}
+
+// LIST ALL SHOW/HIDE ELEMENT IDS HERE
+menus_array = new Array ('ddAboutUs', 'ddProducts', 'ddSupport');
+menus_status_array = new Array ();// remembers state of switches
+
+function showHideSwitch (theid) {
+  if (document.getElementById) {
+    var switch_id = document.getElementById(theid);
+    var imgid = theid+'Button';
+    var button_id = document.getElementById(imgid);
+    if (menus_status_array[theid] != 'show') {
+      switch_id.className = 'showSwitch';
+	  menus_status_array[theid] = 'show';
+	  document.cookie = theid+'=show';
+    }else{
+      switch_id.className = 'hideSwitch';
+	  menus_status_array[theid] = 'hide';
+	  document.cookie = theid+'=hide';
+    }
+  }
+}
+function resetMenu () { // read cookies and set menus to last visited state
+  if (document.getElementById) {
+    for (var i=0; i<menus_array.length; i++) {
+      var idname = menus_array[i];
+      var switch_id = document.getElementById(idname);
+      var imgid = idname+'Button';
+      var button_id = document.getElementById(imgid);
+      if (getCookie(idname) == 'show') {
+	    button_id.setAttribute ('src', img_close);
+        switch_id.className = 'showSwitch';
+	    menus_status_array [idname] = 'show';
+	  }else{
+	    button_id.setAttribute ('src', img_open);
+        switch_id.className = 'hideSwitch';
+	    menus_status_array [idname] = 'hide';
+	  }
+    }
+  }
+}
+
+
+/***********************************************
+* AnyLink Vertical Menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//Contents for menu 1
+var menu1=new Array()
+menu1[0]='<a href="about_why1.html">Why Choose Orion</a>'
+
+//Contents for menu 2
+var menu2=new Array()
+menu2[0]='<a href="sirius_benefits.html">Benefits</a>'
+menu2[1]='<a href="sirius_technology.html">Technology</a>'
+menu2[2]='<a href="sirius_detaileddesc.html">Detailed Description</a>'
+menu2[3]='<a href="sirius_acctg.html">Accounting software links</a>'
+
+//Contents for menu 3
+var menu3=new Array()
+menu3[0]='<a href="siriuslite_preview.html">Preview system</a>'
+menu3[1]='<a href="siriuslite_download.html">Download demo</a>'
+
+//Contents for menu 4
+var menu4=new Array()
+menu4[0]='<a href="accessories_idscan.html">ID-Scan</a>'
+menu4[1]='<a href="accessories_customerpic.html">Customer Picture</a>'
+menu4[2]='<a href="accessories_scandriver.html">Scan Driver License</a>'
+menu4[3]='<a href="accessories_couponprinter.html">Coupon Printer</a>'
+menu4[4]='<a href="accessories_laserforms.html">Laser Forms</a>'
+menu4[5]='<a href="accessories_barcodes.html">Bar Codes</a>'
+menu4[6]='<a href="accessories_crystalreport.html">Crystal Report</a>'
+
+//Contents for menu 5
+var menu5=new Array()
+menu5[0]='<a href="price_howto.html">How to buy Rental Software</a>'
+
+//Contents for menu 6
+var menu6=new Array()
+menu6[0]='<a href="services_training.html">Training</a>'
+menu6[1]='<a href="services_support.html">After-sales Support</a>'
+menu6[2]='<a href="services_customprog.html">Custom Programming</a>'
+
+//Contents for menu 7
+var menu7=new Array()
+menu7[0]='<a href="news_press.html">In the Press</a>'
+menu7[1]='<a href="news_tradeshows.html">Trade Shows</a>'
+
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+var horizontaloffset=5 //horizontal offset of menu from default location. (0-5 is a good value)
+
+/////No further editting needed
+
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width: 160px" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top=-500
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=menuwidth
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible
+else if (e.type=="click")
+obj.visibility=hidden
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x-obj.offsetWidth < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetWidth
+}
+else{
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move menu up?
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetHeight
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either? (position at top of viewable window then)
+edgeoffset=dropmenuobj.y
+}
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("")
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+if (window.event) event.cancelBubble=true
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu()
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+populatemenu(menucontents)
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+obj.offsetWidth+horizontaloffset+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+"px"
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu()
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden"
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay)
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide)
+}
+
+//-->
+</script>
+
+<script language="javascript" src="js-css/pnghandler.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="js-css/style.css">
+</head>
+
+<body>
+
+<div class="pageWidth">
+	<div class="siriusLogo"><img src="images/sirius_logo.png" width=217 height=69 border=0></div>
+	<div class="languageOption">
+		<span class="level1" style="margin-right: 10px;"><a href="products_siriuslite.html">Sirius Lite Zone</a></span>
+		<span class="level1" style="margin-right: 20px;"><a href="contactus.html">Contact Us</a></span>
+		<span class="level1"><a href="#">Français</a></span>
+		<span class="level1Divider">/</span>
+		<span class="level1"><a href="#">Español</a></span>
+	</div>
+	
+	<div class="blackBG" style="height: 17px;"></div>
+	
+	<div><span><a href="index.html"><img src="images/logo.jpg" width=250 height=173 border=0 alt="Orion Software"></a></span><span><img src="images/header.jpg" width=550 height=173 border=0></span></div>
+	
+	<div id="wrapper">
+		<div id="leftColumn" class="column">
+			<div class="vSpace10"></div>
+			
+			<div style="margin-left: 18px;">
+				<!-- <div><img src="images/top_navheader.gif" width=196 height=11 border=0></div> -->
+				<div><a href="index.html" onMouseOver="return highlight('home','images/','Home')" onMouseOut="return unhighlight('home','images/')"><img src="images/bthome.gif" name="home" width=191 height=28 border=0 alt="Home"></a></div>
+				<div class="vSpace2"></div>
+				<div id="expandMenu">					
+					
+					<dt id="dtProducts" onclick="showHideSwitch('ddProducts')" onMouseOver="return highlight('products','images/','Products')" onMouseOut="return unhighlight('products','images/')" style="cursor: pointer; margin-bottom: -5px;"><a href="products.html"><img src="images/btproducts.gif" name="products" width=191 height=29 border=0 alt="Products"></a></dt>
+					<dd class="hideSwitch" id="ddProducts">
+						<div class="expandTable">
+							<div class="vSpace10"></div>
+							<div class="level2"><a href="products_sirius.html" onMouseover="dropdownmenu(this, event, menu2, '170px')" onMouseout="delayhidemenu()">Sirius</a></div>
+							<!-- <div class="vSpace5"></div>
+							<div class="level2"><a href="products_siriuslite.html" onMouseover="dropdownmenu(this, event, menu3, '110px')" onMouseout="delayhidemenu()">Sirius Lite</a></div> -->
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="products_accessories.html" onMouseover="dropdownmenu(this, event, menu4, '130px')" onMouseout="delayhidemenu()">Accessories</a></div>
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="products_price.html" onMouseover="dropdownmenu(this, event, menu5, '180px')" onMouseout="delayhidemenu()">Price</a></div>
+							<div class="vSpace10"></div>
+						</div>
+					</dd>
+					
+					<dt class="vSpace2"></dt>
+					<dt id="dtSupport" onclick="showHideSwitch('ddSupport')" onMouseOver="return highlight('support','images/','Support')" onMouseOut="return unhighlight('support','images/')" style="cursor: pointer; margin-bottom: -5px;"><img src="images/btsupport.gif" name="support" width=191 height=27 border=0 alt="Support"></dt>
+					<dd class="hideSwitch" id="ddSupport">
+						<div class="expandTable">
+							<div class="vSpace10"></div>
+							<div class="level2"><a href="support_callcentre.html">Call Centre</a></div>
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="support_implementation.html">Implementation</a></div>
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="support_faq.html">FAQ</a></div>
+							<!-- <div class="vSpace5"></div>
+							<div class="level2"><a href="support_upgrades.html">Upgrades</a></div>
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="support_clientlogin.html">Client Login</a></div> -->
+							<div class="vSpace10"></div>
+						</div>
+					</dd>
+					
+					<dt class="vSpace3"></dt>
+					<dt id="dtAboutUs" onclick="showHideSwitch('ddAboutUs')" onMouseOver="return highlight('aboutus','images/','About Us')" onMouseOut="return unhighlight('aboutus','images/')" style="cursor: pointer; margin-bottom: -5px;"><img src="images/btaboutus.gif" name="aboutus" width=191 height=27 border=0 alt="About Us"></dt>
+					<dd class="showSwitch" id="ddAboutUs">
+						<div class="expandTable">
+							<div class="vSpace10"></div>
+							<!--
+							<div class="level2"><a href="aboutus.html">About Us</a></div>
+							<div class="vSpace5"></div>
+							-->
+							<div class="level2"><a href="about_presidentsmessage.html">President's Message</a></div>
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="about_whoweare.html" onMouseover="dropdownmenu(this, event, menu1, '125px')" onMouseout="delayhidemenu()">Who We Are</a></div>
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="about_links.html">Links & Associations</a></div>
+							<div class="vSpace5"></div>
+							<div class="level2"><a href="about_news.html" onMouseover="dropdownmenu(this, event, menu7, '100px')" onMouseout="delayhidemenu()">News and Events</a></div>
+							<div class="vSpace10"></div>
+						</div>
+					</dd>
+				</div>
+				<!-- <div><img src="images/bottom_navheader.gif" width=196 height=17 border=0></div> -->
+			</div>
+			
+			<!--
+			<div class="vSpace20"></div>
+			<div style="margin-left: 70px;"><a href="#"><img src="images/btdemo.gif" width=93 height=49 border=0></a></div>
+			<div class="vSpace30"></div>
+			-->
+			<div style="margin-left: 19px;"><img src="images/tollfree.jpg" width=191 height=178 border=0></div>
+			<div class="vSpace30"></div>
+			
+			<div align="center" style="margin-top: 50px;"><img src="images/logos.gif" width=163 height=111 border=0></div>
+		</div>
+		
+		<div id="centerColumn" class="column">
+		</div>
+		
+		<div id="rightColumn" class="column content" style="width: 500px;">
+			<div class="vSpace10"></div>
+			<div class="subHeader">Why choose Orion</div>
+			<p><b>Orion Software works for you!</b>
+			<p>Our objective is to keep you as an active and happy customer solely by the quality of our products and services, not because we use proprietary technology known only to us!
+			<p><b>Standard Windows technology</b>
+			<p>Sirius is based on Microsoft's Windows technology, an industry standard. Clear and simple. Our system does not require any special technological installation, to your benefit!
+			<p><b>Buy your hardware locally</b>
+			<p>Sirius works on most standard computers, and uses Windows platforms (user & server). We employ the technology everybody uses, everywhere!
+			<p>You can buy your equipment and network hardware locally and encourage your local businesses. Finally, you shall benefit from close and rapid technical service, in case of computer problems.
+			<p><b>Sirius, a 3rd generation software</b>
+			<p>To our knowledge, we are the first corporation that rewrote its software 3 times, over a 15 year period. Why? Because it makes sense to use the benefits of new technology. Just imagine you build a house for the 3rd time, using the latest material available on the market, with 15 years of experience to back you up! Wouldn't it be the best on the market?
+		</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	<div class="vSpace30"></div>
+	
+	<div class="blueBG"><img src="images/pixel.gif" width=800 height=12 border=0></div>
+	<div class="lightBlueBG"><img src="images/pixel.gif" width=800 height=1 border=0></div>
+	<div class="blackBG"><img src="images/pixel.gif" width=800 height=7 border=0></div>
+	<div class="blueBG"><img src="images/pixel.gif" width=800 height=2 border=0></div>
+</div>
+
+
+</body>
+</html>
